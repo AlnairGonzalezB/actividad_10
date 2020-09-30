@@ -3,10 +3,11 @@ const lista = document.getElementById("lista");
 var nombres = ['Alnair', 'Kevin', 'Esteban', 'Elkueros'];
 
 const agregar = () => {
-    var nomb = document.getElementById("elemento").value;
+    var nomb = document.getElementById("elemento");
     lista.innerHTML = '';
-    nombres.push(nomb);
+    nombres.push(nomb.value);
     mostrar();
+    nomb.value = "";
 }
 
 const mostrar = () => {
